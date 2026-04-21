@@ -1,223 +1,179 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="EB_GC9qkp6e9zCDEQtlP9y5Gu1hH7nqslgfhZI4pf9M" />
 
-<title>Plaquiste Nice 06 | Peintre Var 83 | ZF Cloisons</title>
-<meta name="description" content="Plaquiste et peintre professionnel dans les Alpes-Maritimes (06) et le Var (83). Devis gratuit sous 24h.">
+<title>ZF Cloisons | Plaquiste & Peintre Professionnel</title>
+
+<meta name="description" content="Fares Zekri, plaquiste et peintre professionnel dans les Alpes-Maritimes (06) et le Var (83). Devis gratuit, travaux de qualité.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial,sans-serif;color:#333;line-height:1.6;}
-.container{max-width:1200px;margin:auto;padding:20px;}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-header{
-background:#1a1a2e;
-color:white;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
+/* Header */
+header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: bold; color: #e94560; }
+.logo span { color: white; }
+
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav a { color: white; text-decoration: none; transition: color 0.3s; }
+nav a:hover { color: #e94560; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 150px 0 100px; text-align: center; }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero h1 span { color: #e94560; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+.btn {
+display: inline-block;
+padding: 15px 40px;
+background: #e94560;
+color: white;
+text-decoration: none;
+border-radius: 50px;
+transition: transform 0.3s, box-shadow 0.3s;
+margin: 5px;
 }
 
-header .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
 }
 
-.logo{font-size:1.5rem;color:#e94560;font-weight:bold;}
+/* Services */
+.services { padding: 80px 0; background: #f8f9fa; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #1a1a2e; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.service-card { background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
+/* About */
+.about { padding: 80px 0; }
+.about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.about-image img { max-width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+/* Contact */
+.contact { padding: 80px 0; background: #1a1a2e; color: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+
+input, textarea {
+width: 100%;
+padding: 15px;
+margin-bottom: 15px;
+border: none;
+border-radius: 10px;
 }
 
-.hero{
-padding:160px 20px 100px;
-background:#16213e;
-color:white;
-text-align:center;
+button {
+width: 100%;
+padding: 15px;
+background: #e94560;
+color: white;
+border: none;
+border-radius: 10px;
+cursor: pointer;
 }
 
-.hero h1{font-size:2.5rem;margin-bottom:15px;}
+/* Footer */
+footer { background: #0f0f23; color: white; text-align: center; padding: 30px 0; }
 
-.btn{
-display:inline-block;
-background:#e94560;
-color:white;
-padding:15px 30px;
-border-radius:50px;
-text-decoration:none;
-margin:10px;
+/* WHATSAPP BUTTON */
+.whatsapp {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+padding: 15px;
+border-radius: 50%;
+font-size: 24px;
+text-decoration: none;
+z-index: 1000;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.topbar{
-background:#e94560;
-color:white;
-text-align:center;
-padding:8px;
-font-weight:bold;
-}
-
-section{padding:80px 0;}
-
-.section-title{
-text-align:center;
-font-size:2rem;
-margin-bottom:40px;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.card{
-background:#f8f9fa;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.card h3{margin-bottom:10px;}
-
-.about{
-background:#f8f9fa;
-}
-
-.contact{
-background:#1a1a2e;
-color:white;
-}
-
-input,textarea{
-width:100%;
-padding:12px;
-margin-bottom:10px;
-border:none;
-border-radius:5px;
-}
-
-button{
-background:#e94560;
-color:white;
-padding:12px;
-border:none;
-width:100%;
-}
-
-footer{
-background:#0f0f23;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-font-size:22px;
+/* Responsive */
+@media (max-width: 768px) {
+.hero h1 { font-size: 2rem; }
+nav ul { display: none; }
+.about-content, .contact-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-🚨 Devis GRATUIT sous 24h | 📞 07 60 16 66 08
-</div>
-
 <header>
 <div class="container">
-<div class="logo">ZF Cloisons</div>
+<div class="logo">ZF <span>Cloisons</span></div>
+
 <nav>
-<a href="#services">Services</a>
-<a href="#about">À propos</a>
-<a href="#contact">Contact</a>
+<ul>
+<li><a href="#accueil">Accueil</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">À Propos</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
+
 </div>
 </header>
 
-<section class="hero">
-<h1>Plaquiste & Peintre Professionnel</h1>
-<p>+500 chantiers réalisés | Travail soigné | Intervention rapide</p>
+<section id="accueil" class="hero">
+<div class="container">
+<h1>ZF <span>Cloisons</span></h1>
+
+<p>Plaquiste & Peintre Professionnel dans les Alpes-Maritimes (06) et le Var (83). Votre artisan de confiance.</p>
+
+<!-- ✅ AJOUT IMPORTANT -->
 <a href="tel:0760166608" class="btn">📞 Appeler maintenant</a>
-<a href="#contact" class="btn">Devis gratuit</a>
+<a href="#contact" class="btn">Demander un devis gratuit</a>
+
+</div>
 </section>
 
-<section id="services">
+<section id="services" class="services">
 <div class="container">
 <h2 class="section-title">Nos Services</h2>
 
 <div class="services-grid">
-
-<div class="card">
+<div class="service-card">
 <h3>🧱 Plâtrerie & Cloisons</h3>
-<p>Pose de placo, cloisons, faux plafonds et isolation thermique et phonique. Finitions propres et durables.</p>
-<p><strong>✔ Devis gratuit | ✔ Travail soigné</strong></p>
+<p>Pose de cloisons sèches, doublages, faux plafonds et isolation thermique.</p>
 </div>
 
-<div class="card">
+<div class="service-card">
 <h3>🎨 Peinture Intérieure</h3>
-<p>Peinture murs, plafonds et boiseries avec préparation complète pour un rendu impeccable.</p>
-<p><strong>✔ Finitions parfaites</strong></p>
+<p>Peinture murs, plafonds et boiseries avec finitions propres et durables.</p>
 </div>
 
-<div class="card">
+<div class="service-card">
 <h3>🔧 Rénovation Complète</h3>
-<p>Rénovation intérieure clé en main avec un seul interlocuteur pour simplifier vos travaux.</p>
-<p><strong>✔ Gestion complète</strong></p>
+<p>Rénovation intérieure complète avec un seul interlocuteur.</p>
+</div>
 </div>
 
-<div class="card">
-<h3>🏠 Isolation</h3>
-<p>Isolation thermique pour améliorer le confort et réduire vos factures.</p>
-<p><strong>✔ Gain énergétique</strong></p>
-</div>
-
-<div class="card">
-<h3>✨ Finitions & Décoration</h3>
-<p>Enduits décoratifs, papier peint et finitions haut de gamme.</p>
-<p><strong>✔ Résultat esthétique</strong></p>
-</div>
-
-<div class="card">
-<h3>🛠️ Dépannage</h3>
-<p>Réparation rapide de murs, fissures et dégâts.</p>
-<p><strong>✔ Intervention rapide</strong></p>
-</div>
-
-</div>
 </div>
 </section>
 
-<section class="about" id="about">
+<section id="about" class="about">
 <div class="container">
-<h2 class="section-title">À propos</h2>
-<p>
-Artisan expérimenté en plâtrerie et peinture, je réalise vos projets avec sérieux et précision.
-Chaque chantier est réalisé avec soin pour garantir un résultat durable et esthétique.
-</p>
-</div>
-</section>
+<div class="about-content">
 
-<section>
-<div class="container">
-<h2 class="section-title">Avis clients</h2>
-<div class="services-grid">
-<div class="card">"Travail impeccable, très professionnel"</div>
-<div class="card">"Rapide et efficace, je recommande"</div>
-<div class="card">"Très bon artisan, résultat parfait"</div>
+<div>
+<h2 class="section-title">À Propos</h2>
+<p>Artisan expérimenté dans la plâtrerie et la peinture, je réalise vos travaux avec sérieux et qualité.</p>
+</div>
+
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600">
+</div>
+
 </div>
 </div>
 </section>
@@ -226,20 +182,32 @@ Chaque chantier est réalisé avec soin pour garantir un résultat durable et es
 <div class="container">
 <h2 class="section-title">Contact</h2>
 
+<div class="contact-grid">
+
+<div>
+<p>📞 07 60 16 66 08</p>
+<p>📧 fzcloisons.contact@gmail.com</p>
+<p>📍 06 & 83</p>
+</div>
+
+<div>
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 <input type="text" name="name" placeholder="Nom" required>
 <input type="email" name="email" placeholder="Email" required>
 <textarea name="message" placeholder="Message" required></textarea>
 <button type="submit">Envoyer</button>
 </form>
+</div>
 
+</div>
 </div>
 </section>
 
 <footer>
-<p>© ZF Cloisons - Tous droits réservés</p>
+<p>© 2024 ZF Cloisons</p>
 </footer>
 
+<!-- 💬 WHATSAPP -->
 <a href="https://wa.me/33760166608" class="whatsapp">💬</a>
 
 </body>
