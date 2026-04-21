@@ -3,191 +3,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="google-site-verification" content="EB_GC9qkp6e9zCDEQtlP9y5Gu1hH7nqslgfhZI4pf9M" />
 
 <title>ZF Cloisons | Plaquiste & Peintre Professionnel</title>
 
-<meta name="description" content="Fares Zekri, plaquiste et peintre professionnel dans les Alpes-Maritimes (06) et le Var (83). Devis gratuit, travaux de qualité.">
+<meta name="description" content="Fares Zekri, plaquiste et peintre professionnel dans les Alpes-Maritimes (06) et le Var (83). Devis gratuit.">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-/* Header */
-header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-header .container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.8rem; font-weight: bold; color: #e94560; }
-.logo span { color: white; }
-
-nav ul { display: flex; list-style: none; gap: 30px; }
-nav a { color: white; text-decoration: none; transition: color 0.3s; }
-nav a:hover { color: #e94560; }
-
-/* Hero */
-.hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 150px 0 100px; text-align: center; }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
-.hero h1 span { color: #e94560; }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
-
-.btn {
-display: inline-block;
-padding: 15px 40px;
-background: #e94560;
-color: white;
-text-decoration: none;
-border-radius: 50px;
-transition: transform 0.3s, box-shadow 0.3s;
-margin: 5px;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:'Segoe UI',sans-serif;
+line-height:1.6;
+color:#eaeaea;
+background:#0f0f0f;
 }
 
-.btn:hover {
-transform: translateY(-3px);
-box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+/* CONTAINER */
+.container{max-width:1200px;margin:auto;padding:0 20px;}
+
+/* HEADER */
+header{
+background:#0b0b0b;
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+border-bottom:1px solid #2a2a2a;
 }
 
-/* Services */
-.services { padding: 80px 0; background: #f8f9fa; }
-.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #1a1a2e; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.service-card { background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-/* About */
-.about { padding: 80px 0; }
-.about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.about-image img { max-width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-
-/* Contact */
-.contact { padding: 80px 0; background: #1a1a2e; color: white; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-
-input, textarea {
-width: 100%;
-padding: 15px;
-margin-bottom: 15px;
-border: none;
-border-radius: 10px;
+header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
 }
 
-button {
-width: 100%;
-padding: 15px;
-background: #e94560;
-color: white;
-border: none;
-border-radius: 10px;
-cursor: pointer;
+/* LOGO IMAGE */
+.logo img{
+height:55px;
+filter: drop-shadow(0 0 5px #e94560);
 }
 
-/* Footer */
-footer { background: #0f0f23; color: white; text-align: center; padding: 30px 0; }
-
-/* WHATSAPP BUTTON */
-.whatsapp {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #25D366;
-color: white;
-padding: 15px;
-border-radius: 50%;
-font-size: 24px;
-text-decoration: none;
-z-index: 1000;
-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+/* NAV */
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-.hero h1 { font-size: 2rem; }
-nav ul { display: none; }
-.about-content, .contact-grid { grid-template-columns: 1fr; }
+nav a{
+color:#c0c0c0;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#e94560;
+}
+
+/* HERO */
+.hero{
+padding:160px 20px 100px;
+text-align:center;
+background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+}
+
+.hero h1{
+font-size:3rem;
+color:#ffffff;
+}
+
+.hero span{
+color:#e94560;
+}
+
+.hero p{
+margin:20px auto;
+max-width:600px;
+color:#c0c0c0;
+}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+padding:15px 35px;
+margin:10px;
+background:#e94560;
+color:white;
+border-radius:50px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff2e63;
+transform:translateY(-3px);
+}
+
+/* SECTIONS */
+section{padding:80px 0;}
+
+.section-title{
+text-align:center;
+font-size:2.3rem;
+margin-bottom:40px;
+color:#ffffff;
+}
+
+/* SERVICES */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:#1a1a1a;
+padding:30px;
+border-radius:12px;
+border:1px solid #2a2a2a;
+}
+
+.service-card h3{
+color:#e94560;
+margin-bottom:10px;
+}
+
+/* ABOUT */
+.about-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:12px;
+}
+
+/* CONTACT */
+.contact{
+background:#111;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:none;
+border-radius:8px;
+background:#1a1a1a;
+color:white;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#e94560;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#0b0b0b;
+color:#777;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+z-index:1000;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{font-size:2rem;}
+nav ul{display:none;}
+.about-content,.contact-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
 <div class="container">
-<div class="logo">ZF <span>Cloisons</span></div>
+
+<!-- ✅ LOGO IMAGE -->
+<div class="logo">
+<img src="/mnt/data/a_clean_vector_logo_design_on_a_dark_black_backgro.png" alt="ZF Cloisons Logo">
+</div>
 
 <nav>
 <ul>
-<li><a href="#accueil">Accueil</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#about">À Propos</a></li>
+<li><a href="#about">À propos</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="tel:0760166608" style="color:#e94560;">📞 Appeler</a></li>
 </ul>
 </nav>
 
 </div>
 </header>
 
-<section id="accueil" class="hero">
-<div class="container">
+<!-- HERO -->
+<section class="hero">
 <h1>ZF <span>Cloisons</span></h1>
 
-<p>Plaquiste & Peintre Professionnel dans les Alpes-Maritimes (06) et le Var (83). Votre artisan de confiance.</p>
+<p>Plaquiste & Peintre professionnel dans les Alpes-Maritimes (06) et le Var (83)</p>
 
-<!-- ✅ AJOUT IMPORTANT -->
 <a href="tel:0760166608" class="btn">📞 Appeler maintenant</a>
-<a href="#contact" class="btn">Demander un devis gratuit</a>
-
-</div>
+<a href="#contact" class="btn">Devis gratuit</a>
 </section>
 
-<section id="services" class="services">
+<!-- SERVICES -->
+<section id="services">
 <div class="container">
 <h2 class="section-title">Nos Services</h2>
 
 <div class="services-grid">
+
 <div class="service-card">
 <h3>🧱 Plâtrerie & Cloisons</h3>
-<p>Pose de cloisons sèches, doublages, faux plafonds et isolation thermique.</p>
+<p>Pose de placo, faux plafonds et isolation intérieure.</p>
 </div>
 
 <div class="service-card">
-<h3>🎨 Peinture Intérieure</h3>
-<p>Peinture murs, plafonds et boiseries avec finitions propres et durables.</p>
+<h3>🎨 Peinture</h3>
+<p>Peinture intérieure propre et finitions professionnelles.</p>
 </div>
 
 <div class="service-card">
-<h3>🔧 Rénovation Complète</h3>
-<p>Rénovation intérieure complète avec un seul interlocuteur.</p>
-</div>
+<h3>🔧 Rénovation</h3>
+<p>Rénovation complète de vos espaces intérieurs.</p>
 </div>
 
+</div>
 </div>
 </section>
 
-<section id="about" class="about">
+<!-- ABOUT -->
+<section id="about">
 <div class="container">
 <div class="about-content">
 
 <div>
-<h2 class="section-title">À Propos</h2>
-<p>Artisan expérimenté dans la plâtrerie et la peinture, je réalise vos travaux avec sérieux et qualité.</p>
+<h2 class="section-title">À propos</h2>
+<p>Artisan expérimenté, je réalise vos travaux avec sérieux, qualité et finition soignée.</p>
 </div>
 
-<div class="about-image">
-<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600">
+<div>
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800">
 </div>
 
 </div>
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact">
 <div class="container">
 <h2 class="section-title">Contact</h2>
 
 <div class="contact-grid">
 
-<div>   M.ZEKRI FARES
+<div>
 <p>📞 07 60 16 66 08</p>
 <p>📧 fzcloisons.contact@gmail.com</p>
-<p>📍 06 & 83</p>
+<p>📍 06 / 83</p>
 </div>
 
 <div>
@@ -204,10 +309,10 @@ nav ul { display: none; }
 </section>
 
 <footer>
-<p>© 2024 ZF Cloisons</p>
+<p>© ZF Cloisons - Tous droits réservés</p>
 </footer>
 
-<!-- 💬 WHATSAPP -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/33760166608" class="whatsapp">💬</a>
 
 </body>
