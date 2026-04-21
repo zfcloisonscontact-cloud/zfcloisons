@@ -66,6 +66,7 @@
       --white: #ffffff;
       --gray: #c0c0c0;
       --gray-dark: #777777;
+      --whatsapp: #25D366;
       --shadow: 0 4px 20px rgba(233, 69, 96, 0.15);
       --shadow-lg: 0 10px 40px rgba(233, 69, 96, 0.2);
       --transition: all 0.3s ease;
@@ -276,6 +277,18 @@
       background: var(--red-light);
       transform: translateY(-3px);
       box-shadow: 0 8px 30px rgba(233, 69, 96, 0.6);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe57;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
     }
 
     .btn-outline {
@@ -537,8 +550,8 @@
     .form-group textarea:focus,
     .form-group select:focus {
       outline: none;
-      border-color: var(--red);
-      box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+      border-color: var(--whatsapp);
+      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
     }
 
     .form-group input::placeholder,
@@ -585,7 +598,7 @@
       right: 25px;
       width: 60px;
       height: 60px;
-      background: #25D366;
+      background: var(--whatsapp);
       color: white;
       border-radius: 50%;
       display: flex;
@@ -682,7 +695,7 @@
       <h1>ZF <span>Cloisons</span></h1>
       <p class="hero-subtitle">Plaquiste & Peintre Expert<br>Intervention rapide dans les Alpes-Maritimes (06) et le Var (83)</p>
       <div class="hero-cta">
-        <a href="https://wa.me/33760166608?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20mes%20travaux" class="btn btn-primary" target="_blank">💬 Devis WhatsApp</a>
+        <a href="#contact" class="btn btn-whatsapp">💬 Devis WhatsApp</a>
         <a href="tel:0760166608" class="btn btn-outline">📞 Appeler maintenant</a>
       </div>
     </div>
@@ -810,10 +823,10 @@
             </div>
           </div>
         </div>
+
+        <!-- FORMULAIRE WHATSAPP -->
         <div class="contact-form fade-in">
-          <!-- ⚠️ REMPLACEZ "YOUR_FORM_ID" par votre ID Formspree -->
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="hidden" name="_subject" value="Nouvelle demande de devis - ZF Cloisons">
+          <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
             <div class="form-group">
               <label for="name">Nom complet *</label>
               <input type="text" id="name" name="name" placeholder="Votre nom" required>
@@ -827,24 +840,28 @@
               <input type="email" id="email" name="email" placeholder="Votre email">
             </div>
             <div class="form-group">
+              <label for="ville">Ville</label>
+              <input type="text" id="ville" name="ville" placeholder="Votre ville (ex: Cannes)">
+            </div>
+            <div class="form-group">
               <label for="service">Type de prestation</label>
               <select id="service" name="service">
                 <option value="">Sélectionnez un service</option>
-                <option value="placo">Plâtrerie & Cloisons</option>
-                <option value="peinture">Peinture Intérieure</option>
-                <option value="renovation">Rénovation Complète</option>
-                <option value="isolation">Isolation</option>
-                <option value="finitions">Finitions & Décoration</option>
-                <option value="depannage">Dépannage</option>
-                <option value="autre">Autre</option>
+                <option value="Plâtrerie & Cloisons">Plâtrerie & Cloisons</option>
+                <option value="Peinture Intérieure">Peinture Intérieure</option>
+                <option value="Rénovation Complète">Rénovation Complète</option>
+                <option value="Isolation">Isolation</option>
+                <option value="Finitions & Décoration">Finitions & Décoration</option>
+                <option value="Dépannage">Dépannage</option>
+                <option value="Autre">Autre</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Décrivez votre projet *</label>
               <textarea id="message" name="message" placeholder="Décrivez votre projet en quelques lignes..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              ✉️ Envoyer ma demande
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
+              💬 Envoyer sur WhatsApp
             </button>
           </form>
         </div>
@@ -861,7 +878,7 @@
       <a href="mailto:zfcloisons.contact@gmail.com">📧 zfcloisons.contact@gmail.com</a>
     </p>
     <div class="footer-bottom">
-      <p>© 2024 ZF Cloisons - Tous droits réservés | Artisan plaquiste & peintre dans le 06 & 83</p>
+      <p>© 2026 ZF Cloisons - Tous droits réservés | Artisan plaquiste & peintre dans le 06 & 83</p>
     </div>
   </footer>
 
@@ -916,6 +933,44 @@
         navbar.style.boxShadow = 'none';
       }
     });
+
+    // ===== ENVOI WHATSAPP =====
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const ville = document.getElementById('ville').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+
+      // Construction du message
+      let text = "*Nouvelle demande de devis - ZF Cloisons*%0A%0A";
+      text += "*Nom:* " + name + "%0A";
+      text += "*Téléphone:* " + phone + "%0A";
+
+      if (email) {
+        text += "*Email:* " + email + "%0A";
+      }
+
+      if (ville) {
+        text += "*Ville:* " + ville + "%0A";
+      }
+
+      if (service) {
+        text += "*Service demandé:* " + service + "%0A";
+      }
+
+      text += "%0A*Message:*%0A" + message;
+
+      // Numéro WhatsApp (avec le +33)
+      const whatsappNumber = "33760166608";
+
+      // Ouverture de WhatsApp
+      const url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+      window.open(url, '_blank');
+    }
   </script>
 </body>
 </html>
