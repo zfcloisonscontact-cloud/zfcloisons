@@ -60,7 +60,86 @@
             nav ul { display: none; }
             .about-content, .contact-grid { grid-template-columns: 1fr; }
         }
+    
+        /* ===== RÉALISATIONS ===== */
+        .realisations { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+        .realisations-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 30px; 
+            margin-top: 50px;
+        }
+        .realisation-card { 
+            background: white; 
+            padding: 40px 30px; 
+            border-radius: 20px; 
+            text-align: center; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .realisation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .realisation-card:hover::before {
+            transform: scaleX(1);
+        }
+        .realisation-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .realisation-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.3);
+            transition: all 0.4s ease;
+        }
+        .realisation-card:hover .realisation-icon {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 12px 30px rgba(233, 69, 96, 0.4);
+        }
+        .realisation-card h3 {
+            font-size: 1.3rem;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .realisation-card p {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .realisation-badge {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.1);
+            color: #e94560;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
     </style>
+<base target="_blank">
 </head>
 
 <body>
@@ -108,6 +187,60 @@
             <div class="service-card">
                 <h3>Rénovation</h3>
                 <p>Rénovation complète de votre intérieur.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="realisations" class="realisations">
+    <div class="container">
+        <h2 class="section-title">Nos <span style="color:#e94560;">Réalisations</span></h2>
+        <p style="text-align:center; color:#6c757d; max-width:600px; margin:0 auto 30px;">Découvrez nos expertises et le type de chantiers que nous réalisons avec professionnalisme</p>
+
+        <div class="realisations-grid">
+
+            <div class="realisation-card">
+                <div class="realisation-icon">🏠</div>
+                <h3>Rénovation Appartement</h3>
+                <p>Rénovation complète d'appartements : démolition, reconstruction, placo, peinture et finitions.</p>
+                <span class="realisation-badge">+120 projets</span>
+            </div>
+
+            <div class="realisation-card">
+                <div class="realisation-icon">🏢</div>
+                <h3>Bureaux & Commerces</h3>
+                <p>Aménagement de locaux professionnels avec respect des délais et des normes.</p>
+                <span class="realisation-badge">+45 projets</span>
+            </div>
+
+            <div class="realisation-card">
+                <div class="realisation-icon">🏡</div>
+                <h3>Maisons & Villas</h3>
+                <p>Rénovation intérieure complète de maisons individuelles et villas sur la Côte d'Azur.</p>
+                <span class="realisation-badge">+80 projets</span>
+            </div>
+
+            <div class="realisation-card">
+                <div class="realisation-icon">🛁</div>
+                <h3>Salles de Bain</h3>
+                <p>Création et rénovation de salles de bain : placo hydrofuge, peinture spéciale, finitions.</p>
+                <span class="realisation-badge">+60 projets</span>
+            </div>
+
+            <div class="realisation-card">
+                <div class="realisation-icon">🍳</div>
+                <h3>Cuisines</h3>
+                <p>Rénovation de cuisines : faux plafonds, éclairage LED, peinture et revêtements muraux.</p>
+                <span class="realisation-badge">+55 projets</span>
+            </div>
+
+            <div class="realisation-card">
+                <div class="realisation-icon">🌿</div>
+                <h3>Extérieurs & Terrasses</h3>
+                <p>Peinture extérieure, ravalement de façades et finitions de terrasses couvertes.</p>
+                <span class="realisation-badge">+30 projets</span>
             </div>
 
         </div>
