@@ -1,302 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta name="robots" content="index, follow">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="EB_GC9qkp6e9zCDEQtlP9y5Gu1hH7nqslgfhZI4pf9M" />
-    <title>ZF Cloisons | Plaquiste & Peintre Professionnel</title>
-    <meta name="description" content="Fares Zekri, plaquiste et peintre professionnel dans les Alpes-Maritimes (06) et le Var (83). Devis gratuit, travaux de qualité.">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="EB_GC9qkp6e9zCDEQtlP9y5Gu1hH7nqslgfhZI4pf9M" />
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+<title>ZF Cloisons | Plaquiste & Peintre Professionnel</title>
+<meta name="description" content="Fares Zekri, plaquiste et peintre professionnel dans le 06 et 83. Devis gratuit.">
 
-        header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        header .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: bold; color: #e94560; }
-        .logo span { color: white; }
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav a { color: white; text-decoration: none; transition: color 0.3s; }
-        nav a:hover { color: #e94560; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;color:#333;}
+.container{max-width:1200px;margin:auto;padding:20px;}
 
-        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 150px 0 100px; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-        .hero h1 span { color: #e94560; }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .btn { display: inline-block; padding: 15px 40px; background: #e94560; color: white; text-decoration: none; border-radius: 50px; margin:5px; }
+header{background:#1a1a2e;color:white;padding:20px;position:fixed;width:100%;top:0;}
+.logo{color:#e94560;font-weight:bold;font-size:1.5rem;}
 
-        .services { padding: 80px 0; background: #f8f9fa; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #1a1a2e; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.hero{background:#1a1a2e;color:white;padding:150px 20px;text-align:center;}
+.btn{background:#e94560;color:white;padding:15px 30px;border-radius:50px;text-decoration:none;margin:5px;display:inline-block;}
 
-        .about { padding: 80px 0; }
-        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.services,.realisations{padding:80px 20px;background:#f8f9fa;}
+.section-title{text-align:center;font-size:2rem;margin-bottom:40px;}
 
-        .contact { padding: 80px 0; background: #1a1a2e; color: white; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.services-grid,.realisations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
 
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            border: none;
-        }
+.service-card,.realisation-card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.service-card:hover,.realisation-card:hover{transform:translateY(-10px);}
 
-        button {
-            width: 100%;
-            padding: 15px;
-            background: #e94560;
-            color: white;
-            border: none;
-            border-radius: 10px;
-        }
+.contact{padding:80px 20px;background:#1a1a2e;color:white;}
+input,textarea{width:100%;padding:15px;margin-bottom:10px;border-radius:10px;border:none;}
+button{width:100%;padding:15px;background:#e94560;color:white;border:none;border-radius:10px;}
 
-        footer { background: #0f0f23; color: white; text-align: center; padding: 30px 0; }
-
-        @media (max-width: 768px) {
-            nav ul { display: none; }
-            .about-content, .contact-grid { grid-template-columns: 1fr; }
-        }
-    
-        /* ===== RÉALISATIONS ===== */
-        .realisations { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
-        .realisations-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 30px; 
-            margin-top: 50px;
-        }
-        .realisation-card { 
-            background: white; 
-            padding: 40px 30px; 
-            border-radius: 20px; 
-            text-align: center; 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            position: relative;
-            overflow: hidden;
-        }
-        .realisation-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #e94560, #ff6b6b);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-        .realisation-card:hover::before {
-            transform: scaleX(1);
-        }
-        .realisation-card:hover { 
-            transform: translateY(-10px); 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-        .realisation-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #e94560, #ff6b6b);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2.5rem;
-            color: white;
-            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.3);
-            transition: all 0.4s ease;
-        }
-        .realisation-card:hover .realisation-icon {
-            transform: rotate(5deg) scale(1.1);
-            box-shadow: 0 12px 30px rgba(233, 69, 96, 0.4);
-        }
-        .realisation-card h3 {
-            font-size: 1.3rem;
-            color: #1a1a2e;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        .realisation-card p {
-            color: #6c757d;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        .realisation-badge {
-            display: inline-block;
-            background: rgba(233, 69, 96, 0.1);
-            color: #e94560;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 15px;
-        }
-
-    </style>
-<base target="_blank">
+footer{text-align:center;padding:30px;background:#0f0f23;color:white;}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="container">
-        <div class="logo">ZF <span>Cloisons</span></div>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<div class="container">
+<div class="logo">ZF Cloisons</div>
+</div>
 </header>
 
-<section id="accueil" class="hero">
-    <div class="container">
-        <h1>ZF <span>Cloisons</span></h1>
-        <p>Plaquiste & Peintre Professionnel dans les Alpes-Maritimes (06) et le Var (83).</p>
+<section class="hero">
+<h1>ZF Cloisons</h1>
+<p>Plaquiste & Peintre Professionnel (06 & 83)</p>
 
-        <a href="tel:0760166608" class="btn">📞 Appeler</a>
-        <a href="#contact" class="btn">📩 Devis</a>
-        <a href="https://wa.me/33760166608" class="btn">💬 WhatsApp</a>
-    </div>
+<a href="tel:0760166608" class="btn">📞 Appeler</a>
+<a href="#contact" class="btn">📩 Devis</a>
+<a href="https://wa.me/33760166608" class="btn">💬 WhatsApp</a>
 </section>
 
-<section id="services" class="services">
-    <div class="container">
-        <h2 class="section-title">Nos Services</h2>
-        <div class="services-grid">
+<section class="services">
+<h2 class="section-title">Nos Services</h2>
+<div class="services-grid">
 
-            <div class="service-card">
-                <h3>Plâtrerie & Cloisons</h3>
-                <p>Pose de cloisons, plafonds et isolation.</p>
-            </div>
+<div class="service-card">
+<h3>Plâtrerie & Cloisons</h3>
+<p>Pose de cloisons, faux plafonds et isolation.</p>
+</div>
 
-            <div class="service-card">
-                <h3>Peinture</h3>
-                <p>Peinture intérieure professionnelle.</p>
-            </div>
+<div class="service-card">
+<h3>Peinture</h3>
+<p>Peinture intérieure professionnelle.</p>
+</div>
 
-            <div class="service-card">
-                <h3>Rénovation</h3>
-                <p>Rénovation complète de votre intérieur.</p>
-            </div>
+<div class="service-card">
+<h3>Rénovation</h3>
+<p>Rénovation complète de votre intérieur.</p>
+</div>
 
-        </div>
-    </div>
+</div>
 </section>
 
+<section class="realisations">
+<h2 class="section-title">Réalisations</h2>
 
-<section id="realisations" class="realisations">
-    <div class="container">
-        <h2 class="section-title">Nos <span style="color:#e94560;">Réalisations</span></h2>
-        <p style="text-align:center; color:#6c757d; max-width:600px; margin:0 auto 30px;">Découvrez nos expertises et le type de chantiers que nous réalisons avec professionnalisme</p>
-
-        <div class="realisations-grid">
-
-            <div class="realisation-card">
-                <div class="realisation-icon">🏠</div>
-                <h3>Rénovation Appartement</h3>
-                <p>Rénovation complète d'appartements : démolition, reconstruction, placo, peinture et finitions.</p>
-                <span class="realisation-badge">+120 projets</span>
-            </div>
-
-            <div class="realisation-card">
-                <div class="realisation-icon">🏢</div>
-                <h3>Bureaux & Commerces</h3>
-                <p>Aménagement de locaux professionnels avec respect des délais et des normes.</p>
-                <span class="realisation-badge">+45 projets</span>
-            </div>
-
-            <div class="realisation-card">
-                <div class="realisation-icon">🏡</div>
-                <h3>Maisons & Villas</h3>
-                <p>Rénovation intérieure complète de maisons individuelles et villas sur la Côte d'Azur.</p>
-                <span class="realisation-badge">+80 projets</span>
-            </div>
-
-            <div class="realisation-card">
-                <div class="realisation-icon">🛁</div>
-                <h3>Salles de Bain</h3>
-                <p>Création et rénovation de salles de bain : placo hydrofuge, peinture spéciale, finitions.</p>
-                <span class="realisation-badge">+60 projets</span>
-            </div>
-
-            <div class="realisation-card">
-                <div class="realisation-icon">🍳</div>
-                <h3>Cuisines</h3>
-                <p>Rénovation de cuisines : faux plafonds, éclairage LED, peinture et revêtements muraux.</p>
-                <span class="realisation-badge">+55 projets</span>
-            </div>
-
-            <div class="realisation-card">
-                <div class="realisation-icon">🌿</div>
-                <h3>Extérieurs & Terrasses</h3>
-                <p>Peinture extérieure, ravalement de façades et finitions de terrasses couvertes.</p>
-                <span class="realisation-badge">+30 projets</span>
-            </div>
-
-        </div>
-    </div>
+<div class="realisations-grid">
+<div class="realisation-card"><h3>Appartement</h3></div>
+<div class="realisation-card"><h3>Maison</h3></div>
+<div class="realisation-card"><h3>Salle de bain</h3></div>
+</div>
 </section>
 
+<!-- POURQUOI NOUS -->
+<section style="padding:60px;text-align:center;">
+<h2>Pourquoi nous choisir ?</h2>
+<p>✔ Devis gratuit</p>
+<p>✔ Travail propre</p>
+<p>✔ +200 clients satisfaits</p>
+<a href="tel:0760166608" class="btn">📞 Appeler</a>
+</section>
+
+<!-- CONTACT AMÉLIORÉ -->
 <section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
+<h2 class="section-title">Contact</h2>
 
-        <div class="contact-grid">
+<div style="text-align:center;margin-bottom:30px;">
+<p><strong>👤 ZEKRI</strong></p>
+<p>📞 <a href="tel:0760166608" style="color:white;">07 60 16 66 08</a></p>
+<p>📧 <a href="mailto:fzcloisons.contact@gmail.com" style="color:white;">fzcloisons.contact@gmail.com</a></p>
+</div>
 
-            <div>
-                <p>📞 07 60 16 66 08</p>
-                <p>📧 fzcloisons.contact@gmail.com</p>
-            </div>
+<form onsubmit="sendWhatsApp(event)">
+<input type="text" name="name" placeholder="Nom" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="tel" name="phone" placeholder="Téléphone">
+<textarea name="message" placeholder="Message" required></textarea>
+<button>Envoyer sur WhatsApp</button>
+</form>
 
-            <div>
-                <form onsubmit="sendWhatsApp(event)">
-                    <input type="text" name="name" placeholder="Nom" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Téléphone">
-                    <textarea name="message" placeholder="Message" required></textarea>
-                    <button>Envoyer sur WhatsApp</button>
-                </form>
-            </div>
-
-        </div>
-    </div>
 </section>
 
 <footer>
-    <p>© ZF Cloisons</p>
+<p>© 2026 ZF Cloisons - Tous droits réservés</p>
 </footer>
 
-<!-- BOUTON WHATSAPP FLOTTANT -->
-<a href="https://wa.me/33760166608" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none;">💬</a>
+<!-- bouton WhatsApp flottant -->
+<a href="https://wa.me/33760166608"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none;font-size:20px;">
+💬
+</a>
 
 <script>
 function sendWhatsApp(e){
-    e.preventDefault();
+e.preventDefault();
 
-    let name = document.querySelector('input[name="name"]').value;
-    let email = document.querySelector('input[name="email"]').value;
-    let phone = document.querySelector('input[name="phone"]').value;
-    let message = document.querySelector('textarea[name="message"]').value;
+let name=document.querySelector('[name=name]').value;
+let email=document.querySelector('[name=email]').value;
+let phone=document.querySelector('[name=phone]').value;
+let message=document.querySelector('[name=message]').value;
 
-    let text = `Bonjour, je souhaite un devis :
-Nom: ${name}
-Email: ${email}
-Téléphone: ${phone}
-Message: ${message}`;
+let text="Bonjour, je souhaite un devis :%0A"+
+"Nom: "+name+"%0A"+
+"Email: "+email+"%0A"+
+"Téléphone: "+phone+"%0A"+
+"Message: "+message;
 
-    let url = "https://wa.me/33760166608?text=" + encodeURIComponent(text);
-
-    window.open(url, '_blank');
+window.open("https://wa.me/33760166608?text="+text);
 }
 </script>
 
